@@ -9,8 +9,9 @@ const App = () => {
   return (
     <Provider store={store}>
       <div>
+      <h1>A short Naration of Lorem Ipsum</h1>
         <ul>
-        <h4>A short Naration of Lorem Ipsum</h4>
+        <h4>Below Contains A title and Body gotten froma random API, Please take your time to Review</h4>
        <li><LoremComponent fetchLorem={fetchLorem} /></li>
         </ul>
       </div>
