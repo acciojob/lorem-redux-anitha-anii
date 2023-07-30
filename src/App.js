@@ -9,8 +9,10 @@ const App = () => {
   return (
     <Provider store={store}>
       <div>
-        <h1>Lorem Ipsum Content</h1>
-        <LoremComponent fetchLorem={fetchLorem} /> {/* Pass the fetchLorem action creator as a prop */}
+        <ul>
+        <h4>A short Naration of Lorem Ipsum</h4>
+       <li><LoremComponent fetchLorem={fetchLorem} /></li>
+        </ul>
       </div>
     </Provider>
   );
