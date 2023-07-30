@@ -11,8 +11,8 @@ const App = () => {
       <div>
       <h1>A short Naration of Lorem Ipsum</h1>
         <ul>
-        <h4>Below Contains A title and Body gotten froma random API, Please take your time to Review</h4>
-       <li className='title'><LoremComponent fetchLorem={fetchLorem} /></li>
+        <h4 className='title'>Below Contains A title and Body gotten froma random API, Please take your time to Review</h4>
+       <li ><LoremComponent fetchLorem={fetchLorem} /></li>
         </ul>
       </div>
     </Provider>
