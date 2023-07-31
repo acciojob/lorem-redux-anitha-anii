@@ -1,30 +1,23 @@
+
+// reducers/loremIpsumReducer.js
+import { SET_LOREM_IPSUM } from "./actions";
+
 const initialState = {
-    data: '',
-    isLoading: false,
-  };
-  
-  const loremReducer = (state = initialState, action) => {
-    switch (action.type) {
-      case 'FETCH_LOREM_START':
-        return {
-          ...state,
-          isLoading: true,
-        };
-      case 'FETCH_LOREM_SUCCESS':
-        return {
-          ...state,
-          data: action.payload,
-          isLoading: false,
-        };
-      case 'FETCH_LOREM_FAILURE':
-        return {
-          ...state,
-          isLoading: false,
-        };
-      default:
-        return state;
-    }
-  };
-  
-  export default loremReducer;
-  
+  title: "",
+  text: "",
+};
+
+const loremIpsumReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case SET_LOREM_IPSUM:
+      return {
+        ...state,
+        title: action.payload.title,
+        text: action.payload.text,
+      };
+    default:
+      return state;
+  }
+};
+
+export default loremIpsumReducer;

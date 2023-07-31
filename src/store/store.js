@@ -1,7 +1,10 @@
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import loremReducer from './reducer';
+import { createStore, combineReducers } from "redux";
+import loremIpsumReducer from "./reducer";
 
-const store = createStore(loremReducer, applyMiddleware(thunk));
+const rootReducer = combineReducers({
+  loremIpsum: loremIpsumReducer,
+});
+
+const store = createStore(rootReducer);
 
 export default store;
